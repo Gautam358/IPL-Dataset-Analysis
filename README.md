@@ -11,7 +11,8 @@ savvy cricket enthusiast.
 
 # Question(1)- Top 10 batsmen based on past 3 years total runs scored
 Answer- select batsman, sum(runs) as total_runs from batting_summary 
-group by batsman order by total_runs desc limit 10;
+group by batsman 
+order by total_runs desc limit 10;
 # Question(2)- Top 10 batsmen based on past 3 years batting average. (min 60 balls faced in each season)
 Answer- select batsman, sum(balls) as total_balls, sum(runs) as total_runs, count(out_no_times) as total_outs, 
 round(sum(runs)/count(out_no_times),2) as batting_average from batting_summary 
